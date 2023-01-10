@@ -59,7 +59,7 @@ form.onsubmit = async (e) => {
     elt = document.getElementById(id)
     messageLoaging(elt)
    
-    axios.post('http://localhost:5000' , {prompt : data.get('prompt')})
+    axios.post('https://my-chatgpt-app.onrender.com/' , {prompt : data.get('prompt')})
     .then(res => {
         clearInterval(loadInterval)
         writeResult(res.data.slice(2) , elt)
